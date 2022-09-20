@@ -54,7 +54,7 @@ const ChatRoom = () => {
     return (
         <div className="py-4 m-5 w-50 shadow bg-white text-dark border rounded container" >
                 <div className="text-center px-3 mb-4 text-capitalize">
-                    <h1 className="text-warning mb-4">{data?.room} Chat Room</h1>
+                    <h1 className="text-dark mb-4">{data?.room} Chat Room</h1>
                 </div>
                 <div className="bg-light border rounded p-3 mb-4" style={{height: "450px", overflowY:"scroll"}}>
                     {
@@ -62,10 +62,10 @@ const ChatRoom = () => {
                             return data.name === msg.name
                             ?
                             <div className="row justify-content-end pl-5 ">
-                                <div className="d-flex flex-column align-items-end m-2 shadow p-2 bg-info border rounded w-auto">
+                                <div className="d-flex flex-column align-items-end m-2 shadow p-2 bg-white border rounded w-auto">
                                     <div>
                                         <strong className="m-1">{msg.name}</strong>
-                                        <small className="text-muted m-1"><Moment fromNow>{msg.time}</Moment></small>
+                                        <small className="text-muted m-1 "><Moment fromNow>{msg.time}</Moment></small>
                                     </div>
                                     <h4 className="m-1">{msg.msg}</h4>
                                 </div>
@@ -86,7 +86,7 @@ const ChatRoom = () => {
                 </div>
                 <div className="form-group d-flex">
                     <input type="text" className="form-control bg-light" name="message" onKeyDown={handleEnter} placeholder="Type your message" value={msg} onChange={handleChange} />
-                    <button type="button" className="btn btn-warning mx-2" disabled={loading} onClick={onSubmit}>
+                    <button type="button" className="btn btn-dark mx-2" disabled={loading} onClick={onSubmit}>
                         {
                             loading
                             ?
