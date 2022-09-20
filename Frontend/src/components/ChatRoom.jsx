@@ -52,9 +52,9 @@ const ChatRoom = () => {
     }
 
     return (
-        <div className="py-4 m-5 w-50 shadow bg-white text-dark border rounded container" >
+        <div className="py-4 m-5 w-50 shadow bg-dark text-dark border rounded container" >
                 <div className="text-center px-3 mb-4 text-capitalize">
-                    <h1 className="text-dark mb-4">{data?.room} Chat Room</h1>
+                    <h1 className="text-light mb-4">{data?.room} Chat Room</h1>
                 </div>
                 <div className="bg-light border rounded p-3 mb-4" style={{height: "450px", overflowY:"scroll"}}>
                     {
@@ -86,7 +86,7 @@ const ChatRoom = () => {
                 </div>
                 <div className="form-group d-flex">
                     <input type="text" className="form-control bg-light" name="message" onKeyDown={handleEnter} placeholder="Type your message" value={msg} onChange={handleChange} />
-                    <button type="button" className="btn btn-dark mx-2" disabled={loading} onClick={onSubmit}>
+                    <button type="button" className="btn btn-light mx-2" disabled={loading} onClick={onSubmit}>
                         {
                             loading
                             ?
